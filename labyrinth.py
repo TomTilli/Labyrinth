@@ -1,3 +1,4 @@
+#Build the reference board for the correct layout
 game_board_ref = [
     [" x "," x "," x "," x " ," x "," x "," x ","   "," x "," x "],
     [" x "," x "," x ","   ","   ","   ","   ","   "," x "," x "],
@@ -10,10 +11,12 @@ game_board_ref = [
     [" x "," x ","   "," x ","   ","   ","   ","   "," x "," x "],
     [" x "," x ","   "," x "," x "," x "," x "," x "," x "," x "]]
 
+#Build an empty board for the player
 game_board = []
 for i in range(10):
     game_board.append([])
 
+#Starting posisition for the player in x y coordinates
 start_x = 2
 start_y = 9
 
@@ -86,6 +89,7 @@ def valid_direction(loc_x, loc_y)->bool:
     except IndexError:
         return False
 
+#The main game loop
 def main():
     draw_board(start_x,start_y)
     direction_x = start_x
